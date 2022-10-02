@@ -1,0 +1,28 @@
+<mat-toolbar color="primary">
+ 
+ 
+    <span>qualification</span> 
+  <span class="example-spacer"></span>
+  <span flex></span>
+  
+ 
+</mat-toolbar>
+
+<mat-sidenav-container fxFlexFill class="sidenav-container">
+
+  <mat-sidenav color="primary" position="end" #sidenav fxLayout="column" mode="over" opened="false" fxHide.gt-sm="true">
+    
+  </mat-sidenav>
+  <mat-sidenav-content fxFlexFill>
+    <div class="page-wrapper" >
+      <div class="container-fluid">
+        <br>
+
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+
+      
+ 
+  </mat-sidenav-content>
+</mat-sidenav-container>

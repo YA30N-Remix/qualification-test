@@ -1,0 +1,36 @@
+
+<div>
+
+  
+    <mat-expansion-panel [expanded]="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>list_alt</mat-icon> Data
+          </mat-panel-title> 
+        </mat-expansion-panel-header> 
+        <main>
+
+            <h1>Projects</h1>
+            
+            <br>
+        
+            <section>
+        
+                <ng-container *ngIf="projects">
+                    <app-project *ngFor="let project of projects" [project]="project" (refreshClick)="refresh()"></app-project>
+                </ng-container>
+        
+                <app-project-adder (add)="refresh()"></app-project-adder>
+        
+                <ng-container *ngIf="!projects">
+                    loading...
+                </ng-container>
+        
+            </section>
+        
+        </main>
+    
+    </mat-expansion-panel>
+  
+  </div>
+  

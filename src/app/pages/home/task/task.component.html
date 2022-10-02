@@ -1,0 +1,40 @@
+<div>
+
+    <ng-container *ngIf="task">
+       
+            <h4 *ngIf="txtNameVisible"> {{ task.name }} </h4>  
+            <button mat-icon-button color="warn" (click)="onDelete(task)" aria-label="Example icon-button with a delete icon">
+                <mat-icon>delete</mat-icon>
+              </button>
+              <button mat-icon-button  (click)="onEdit()" *ngIf="txtNameVisible" aria-label="Example icon-button with a edit icon">
+                <mat-icon>edit</mat-icon>
+              </button> 
+              <div Class="col-xs-12 col-sm-3 col-md-3 col-lg-3"  *ngIf="!txtNameVisible">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Project Name:</mat-label>
+                    <input matInput [(ngModel)]="task.name" #name="ngModel" name="name">
+                </mat-form-field>
+                <button mat-icon-button class="btn btn-sm btn-success" (click)="onOkEdit(task)" aria-label="Example icon-button with a edit icon">
+                    <mat-icon>check</mat-icon>
+                </button>
+            </div>
+       
+        <p> {{ task.description }} {{ task.status }} </p>
+       
+ 
+
+        <ul>
+            <li *ngFor="let task of task.children">
+                <app-task [project]="project" [task]="task"></app-task>
+            </li>
+        </ul>
+
+        <app-task-adder [parent]="task" [project]="project"></app-task-adder>
+ 
+    </ng-container>
+
+    <ng-container *ngIf="!task">
+
+    </ng-container>
+
+</div>

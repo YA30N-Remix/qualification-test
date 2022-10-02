@@ -1,0 +1,57 @@
+/* You can add global styles to this file, and also import other style files */
+@import './assets/IRANSansWeb.css';
+@import './assets/material-icon.css';
+
+mat-expansion-panel-header, mat-expansion-panel-header:hover {
+    background-color: antiquewhite !important;
+}
+
+mat-card {
+    display: flex !important;
+    background-color: #c4d5ef !important;
+    color: aliceblue !important;
+}
+
+button {
+    width: 100%;
+}
+mat-form-field {
+    width: 100%;
+}
+
+mat-expansion-panel {
+    margin: 1px !important;
+}
+
+.ltrInput {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+.mat-expansion-panel-body {
+    padding: 10px 24px 16px !important;
+}
+
+.mat-radio-label {
+    padding-left: 15px;
+}
+
+.mat-radio-label-content {
+    padding-right: 5px !important; 
+}
+.example-container {
+    height: 400px;
+    overflow: auto !important;
+}
+
+thead {
+    background: #3f51b5 !important; 
+}
+ 
+thead > tr > th { 
+    color: #fff !important;
+}
+ 
+table {
+    width:  100% !important;
+}
